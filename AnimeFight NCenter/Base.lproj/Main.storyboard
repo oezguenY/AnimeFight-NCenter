@@ -1,24 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lzT-Sn-O6V">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Base Screen-->
+        <scene sceneID="jaV-uz-tyE">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="lzT-Sn-O6V" customClass="BaseScreen" customModule="AnimeFight_NCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="THv-8V-KKz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gokuvssaitama" translatesAutoresizingMaskIntoConstraints="NO" id="muw-wa-Vag">
+                                <rect key="frame" x="25" y="225.5" width="364" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="muw-wa-Vag" secondAttribute="height" multiplier="16:9" id="Osa-rA-wGe"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-WN-HFw">
+                                <rect key="frame" x="77" y="534.5" width="260" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="WKK-M0-ZNt"/>
+                                    <constraint firstAttribute="height" constant="50" id="WME-Jd-rtx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" red="0.97812938689999995" green="0.89030045270000002" blue="0.31347513199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Choose a Side">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.74510893489999996" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoV-ZJ-owc">
+                                <rect key="frame" x="20" y="445.5" width="374" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="VUx-zc-fFV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r9a-oY-ZFp"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OoV-ZJ-owc" firstAttribute="leading" secondItem="r9a-oY-ZFp" secondAttribute="leading" constant="20" id="6Oc-yt-xxb"/>
+                            <constraint firstItem="muw-wa-Vag" firstAttribute="leading" secondItem="r9a-oY-ZFp" secondAttribute="leading" constant="25" id="8Nm-sh-0cP"/>
+                            <constraint firstItem="OoV-ZJ-owc" firstAttribute="top" secondItem="muw-wa-Vag" secondAttribute="bottom" constant="15" id="ExR-nP-N6E"/>
+                            <constraint firstItem="muw-wa-Vag" firstAttribute="centerY" secondItem="THv-8V-KKz" secondAttribute="centerY" constant="-120" id="b88-oc-nax"/>
+                            <constraint firstItem="IYw-WN-HFw" firstAttribute="centerX" secondItem="THv-8V-KKz" secondAttribute="centerX" id="dP7-eg-htO"/>
+                            <constraint firstItem="r9a-oY-ZFp" firstAttribute="trailing" secondItem="muw-wa-Vag" secondAttribute="trailing" constant="25" id="n1N-JB-ntO"/>
+                            <constraint firstItem="r9a-oY-ZFp" firstAttribute="trailing" secondItem="OoV-ZJ-owc" secondAttribute="trailing" constant="20" id="qLx-SR-8kT"/>
+                            <constraint firstItem="IYw-WN-HFw" firstAttribute="top" secondItem="OoV-ZJ-owc" secondAttribute="bottom" constant="30" id="uuP-dG-Aqi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="IYw-WN-HFw" id="pKY-Kn-zb5"/>
+                        <outlet property="mainImageView" destination="muw-wa-Vag" id="e0k-EY-7jP"/>
+                        <outlet property="nameLabel" destination="OoV-ZJ-owc" id="GhI-nQ-3mU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2q1-8A-Iam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="45"/>
+        </scene>
+        <!--Selection Screen-->
+        <scene sceneID="kD5-wT-pSg">
+            <objects>
+                <viewController storyboardIdentifier="SelectionScreen" id="29o-g3-7x0" customClass="SelectionScreen" customModule="AnimeFight_NCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ScE-fh-gn7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOOSE YOUR FIGHTER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3b-Yb-Fh5">
+                                <rect key="frame" x="79" y="74" width="256" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="PZz-cC-ZAn"/>
+                                    <constraint firstAttribute="width" constant="256" id="uzU-5v-znJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICe-av-cdq">
+                                <rect key="frame" x="132" y="293" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="pwt-gr-vmT"/>
+                                    <constraint firstAttribute="width" constant="150" id="uFf-r6-ueu"/>
+                                </constraints>
+                                <state key="normal" image="dbzlogo"/>
+                                <connections>
+                                    <action selector="dbzTapped:" destination="29o-g3-7x0" eventType="touchUpInside" id="CMF-uB-eSA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozm-RU-mzT">
+                                <rect key="frame" x="132" y="488.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Zq4-hc-oWr"/>
+                                    <constraint firstAttribute="height" constant="150" id="iGC-lW-tDj"/>
+                                </constraints>
+                                <state key="normal" image="opmlogo"/>
+                                <connections>
+                                    <action selector="opmTapped:" destination="29o-g3-7x0" eventType="touchUpInside" id="sDP-Nr-vl8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bWe-RE-UIS"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ICe-av-cdq" firstAttribute="centerY" secondItem="ScE-fh-gn7" secondAttribute="centerY" constant="-80" id="3iU-yg-WK5"/>
+                            <constraint firstItem="ICe-av-cdq" firstAttribute="centerX" secondItem="ScE-fh-gn7" secondAttribute="centerX" id="Yd9-PS-F9s"/>
+                            <constraint firstItem="C3b-Yb-Fh5" firstAttribute="centerX" secondItem="ScE-fh-gn7" secondAttribute="centerX" id="eF0-Dd-Hjd"/>
+                            <constraint firstItem="C3b-Yb-Fh5" firstAttribute="top" secondItem="bWe-RE-UIS" secondAttribute="top" constant="30" id="n9X-9f-2Pf"/>
+                            <constraint firstItem="ozm-RU-mzT" firstAttribute="centerX" secondItem="ScE-fh-gn7" secondAttribute="centerX" id="xO6-OY-jQt"/>
+                            <constraint firstItem="ozm-RU-mzT" firstAttribute="top" secondItem="ICe-av-cdq" secondAttribute="bottom" constant="45.5" id="ztI-8i-4pi"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ah-S6-vdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="926" y="45"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dbzlogo" width="666" height="375"/>
+        <image name="gokuvssaitama" width="610" height="409"/>
+        <image name="opmlogo" width="984" height="253"/>
+    </resources>
 </document>
